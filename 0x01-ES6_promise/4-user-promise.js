@@ -4,3 +4,10 @@ export default function signUpUser(firstName, lastName) {
         lastName: lastName,
     });
 }
+
+export function createUser(firstName, lastName) {
+    return Promise.resolve({
+        firstName,
+        lastName,
+    });
+}

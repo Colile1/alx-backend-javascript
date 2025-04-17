@@ -1,6 +1,6 @@
-import { uploadPhoto, createUser } from './utils';
+const { uploadPhoto, createUser } = require('./utils');
 
-export default async function asyncUploadUser() {
+module.exports = async function asyncUploadUser() {
     try {
         const photo = await uploadPhoto('profile.jpg');
         const user = await createUser('Guillaume', 'Salva');
