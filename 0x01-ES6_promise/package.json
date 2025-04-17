@@ -1,0 +1,20 @@
+{
+  "name": "0x01-ES6_promise",
+  "version": "1.0.0",
+  "description": "ES6 Promises tasks",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "node"
+  },
+  "dependencies": {
+    "jest": "^26.6.0"
+  },
+  "devDependencies": {
+    "babel-jest": "^26.6.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^7.0.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
