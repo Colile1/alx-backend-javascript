@@ -1,25 +1,10 @@
-// Define classes before they are used
-
-export class ALXClass {
-  constructor(year, location) {
-    this._year = year;
-    this._location = location;
-  }
-
-  get year() {
-    return this._year;
-  }
-
-  get location() {
-    return this._location;
-  }
-}
+import ALXClass from './8-hbtn_class.js';
 
 export class StudentALX {
-  constructor(firstName, lastName, alxClass) { // Added alxClass parameter
+  constructor(firstName, lastName, alxClass) {
     this._firstName = firstName;
     this._lastName = lastName;
-    this._alxClass = alxClass; // Assign parameter to internal property
+    this._alxClass = alxClass;
   }
 
   get fullName() {
@@ -27,16 +12,14 @@ export class StudentALX {
   }
 
   get alxClass() {
-    return this._alxClass; // Return the internal property
+    return this._alxClass;
   }
 
   get fullStudentDescription() {
-    // Use 'this' instead of 'self'
-    return `${this._firstName} ${this._lastName} - ${this._alxClass.year} - ${this._alxClass.location}`;
+    return `${this._firstName} ${this._lastName} - ${this._alxClass.size} - ${this._alxClass.location}`;
   }
 }
 
-// Instantiate classes *after* they are defined
 const class2019 = new ALXClass(2019, 'San Francisco');
 const class2020 = new ALXClass(2020, 'San Francisco');
 
@@ -46,9 +29,4 @@ const student3 = new StudentALX('Albert', 'Clinton', class2019);
 const student4 = new StudentALX('Donald', 'Bush', class2019);
 const student5 = new StudentALX('Jason', 'Sandler', class2019);
 
-// Export the list of students
 export const listOfStudents = [student1, student2, student3, student4, student5];
-
-// Also export default if needed, or just the named export as required
-export default listOfStudents; // Assuming default export might be expected by tests
-
