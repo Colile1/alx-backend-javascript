@@ -1,37 +1,44 @@
 export default class ALXCourse {
   constructor(name, length, students) {
-    this._name = name;
-    this._length = length;
-    this._students = students;
+    this.name = name; // Use setter for validation
+    this.length = length; // Use setter for validation
+    this.students = students; // Use setter for validation
   }
 
+  // Name getter and setter
   get name() {
     return this._name;
   }
 
-  set name(value) {
-    if (typeof value !== 'string') {
+  set name(newName) {
+    if (typeof newName !== 'string') {
       throw new TypeError('Name must be a string');
     }
-    this._name = value;
+    this._name = newName;
   }
 
+  // Length getter and setter
   get length() {
     return this._length;
   }
 
-  set length(value) {
-    if (typeof value !== 'number') {
+  set length(newLength) {
+    if (typeof newLength !== 'number') {
       throw new TypeError('Length must be a number');
     }
-    this._length = value;
+    this._length = newLength;
   }
 
+  // Students getter and setter
   get students() {
     return this._students;
   }
 
-  set students(value) {
-    this._students = value;
+  set students(newStudents) {
+    if (!Array.isArray(newStudents) || !newStudents.every((s) => typeof s === 'string')) {
+      throw new TypeError('Students must be an array of strings');
+    }
+    this._students = newStudents;
   }
 }
+
