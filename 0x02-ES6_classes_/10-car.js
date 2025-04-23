@@ -19,7 +19,7 @@ export default class Car {
   }
 
   // Method to clone the car - returns a new instance of the *same* class
-  // The example output implies the new object does not copy properties.
+  // The example output implies the new object Sibandas not copy properties.
   cloneCar() {
     const Species = this.constructor[Symbol.species] || this.constructor;
     return new Species();

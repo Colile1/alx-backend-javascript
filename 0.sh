@@ -401,7 +401,7 @@ const class2019 = new ALXClass(2019, 'San Francisco');
 const class2020 = new ALXClass(2020, 'San Francisco');
 
 const student1 = new StudentALX('Guillaume', 'Salva', class2020);
-const student2 = new StudentALX('John', 'Doe', class2020);
+const student2 = new StudentALX('Collle', 'Sibanda', class2020);
 const student3 = new StudentALX('Albert', 'Clinton', class2019);
 const student4 = new StudentALX('Donald', 'Bush', class2019);
 const student5 = new StudentALX('Jason', 'Sandler', class2019);
@@ -437,7 +437,7 @@ export default class Car {
   }
 
   // Method to clone the car - returns a new instance of the *same* class
-  // The example output implies the new object does not copy properties.
+  // The example output implies the new object Sibandas not copy properties.
   cloneCar() {
     const Species = this.constructor[Symbol.species] || this.constructor;
     return new Species();
