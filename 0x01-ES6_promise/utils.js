@@ -1,10 +1,10 @@
 export function uploadPhoto(filename) {
-    return Promise.resolve(`${filename} uploaded successfully`);
+  return Promise.resolve({ status: 200, body: 'photo-profile-1' });
 }
 
 export function createUser(firstName, lastName) {
-    return Promise.resolve({
-        firstName,
-        lastName,
-    });
+  return Promise.resolve({
+    firstName,
+    lastName,
+  });
 }

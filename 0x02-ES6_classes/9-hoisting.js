@@ -1,4 +1,4 @@
-import ALXClass from './8-hbtn_class.js';
+import ALXClass from './8-hbtn_class';
 
 export class StudentALX {
   constructor(firstName, lastName, alxClass) {
