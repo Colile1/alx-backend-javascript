@@ -1,0 +1,18 @@
+{
+  "name": "node-tasks-project",
+  "version": "1.0.0",
+  "description": "A Node.js project implementing various tasks including HTTP servers, file operations, and Express server structure.",
+  "main": "src/http-server/server.js",
+  "scripts": {
+    "start": "node src/http-server/server.js",
+    "start:express": "node src/express-server/app.js",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
