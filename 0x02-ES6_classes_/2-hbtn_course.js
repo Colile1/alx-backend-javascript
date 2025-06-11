@@ -1,8 +1,8 @@
 export default class ALXCourse {
   constructor(name, length, students) {
-    this.name = name; // Use setter for validation
-    this.length = length; // Use setter for validation
-    this.students = students; // Use setter for validation
+    this.name = name;
+    this.length = length;
+    this.students = students;
   }
 
   // Name getter and setter
