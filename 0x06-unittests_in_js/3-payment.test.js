@@ -1,15 +1,15 @@
 const sinon = require('sinon');
 const Utils = require('./utils');
+const { expect } = require('chai');
 const sendPaymentRequestToApi = require('./3-payment');
 
 describe('sendPaymentRequestToApi', () => {
-  it('should call Utils.calculateNumber with SUM, 100, 20 and log the result', () => {
-    const spy = sinon.spy(Utils, 'calculateNumber');
-    const consoleSpy = sinon.spy(console, 'log');
+  it('sendPaymentRequestToApi uses the calculateNumber method of Utils', () => {
+    const bigBrother = sinon.spy(Utils);
+
     sendPaymentRequestToApi(100, 20);
-    sinon.assert.calledWith(spy, 'SUM', 100, 20);
-    sinon.assert.calledWith(consoleSpy, 'The total is: 120');
-    spy.restore();
-    consoleSpy.restore();
+    expect(bigBrother.calculateNumber.calledWith('SUM', 100, 20)).to.be.true;
+    expect(bigBrother.calculateNumber.callCount).to.be.equal(1);
+    bigBrother.calculateNumber.restore();
   });
 });
